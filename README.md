@@ -1,5 +1,5 @@
 # NFT-Knowledge-Token
-These smart contracts were used to deploy the Knowledge Token NFT's that are used by the [https://github.com/Kent-Uni-Oxford-Hackathon/front-end](front end). A majority of the project details can be found in that repository. 
+These smart contracts were used to deploy the Knowledge Token NFT's that are used by the [front end](https://github.com/Kent-Uni-Oxford-Hackathon/front-end). A majority of the project details can be found in that repository. 
 Currently the NFT's have been deployed by the 16 seperate Solidity smart contracts found in the \src\Subject_NFTs. They are currently deployed to the Ethereum Sepolia Test net shown here:
 
 **Science:**
