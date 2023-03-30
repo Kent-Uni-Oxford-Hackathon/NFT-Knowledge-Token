@@ -2,9 +2,9 @@ pragma solidity ^0.8.0;
 
 
 
-import "./EducationNFT.sol";
+import "./EducationNFTCore.sol";
 
-contract EducationNFTSub is EducationNFT {
+contract EducationNFTSub is EducationNFTCore {
     enum MathSubCategory { Algebra, Geometry, Calculus, Trigonometry }
     enum ScienceSubCategory { Physics, Chemistry, Biology, ComputerScience }
     enum EnglishSubCategory { Grammar, Literature, Writing, PublicSpeaking }
@@ -15,7 +15,9 @@ contract EducationNFTSub is EducationNFT {
     mapping(uint256 => EnglishSubCategory) private _englishSubCategories;
     mapping(uint256 => HistorySubCategory) private _historySubCategories;
 
-    function _generateTokenURI(TokenCategory category, uint256 subCategory) internal pure override returns (string memory) {
+    uint256 private _tokenCount = 0;
+
+    function _generateTokenURI(TokenCategory category, uint256 subCategory) internal returns (string memory) {
         string[3] memory parts;
         parts[0] = "EducationNFT - ";
         parts[1] = getCategoryName(category);
