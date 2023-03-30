@@ -1,5 +1,5 @@
 # NFT-Knowledge-Token
-Smart contracts that were used to deploy the Knowledge Token NFT's. 
+These smart contracts were used to deploy the Knowledge Token NFT's that are used by the [https://github.com/Kent-Uni-Oxford-Hackathon/front-end](front end). A majority of the project details can be found in that repository. 
 Currently the NFT's have been deployed by the 16 seperate Solidity smart contracts found in the \src\Subject_NFTs. They are currently deployed to the Ethereum Sepolia Test net shown here:
 
 **Science:**
@@ -41,3 +41,9 @@ Currently the NFT's have been deployed by the 16 seperate Solidity smart contrac
 [0xf0914653849c2813149845c63fce63E69d2B6803](https://sepolia.etherscan.io/token/0xf0914653849c2813149845c63fce63E69d2B6803) - Calculus
 
 [0xc060b30bc3C57331E847dDEf898D18c0e37227E1](https://sepolia.etherscan.io/token/0xc060b30bc3C57331E847dDEf898D18c0e37227E1) - Statistics
+
+## Future Work
+
+The two files named EducationNFTCore.sol and EducationNFTSub.sol allow a far more susinct creation of the NFT's. In these contracts the information about the NFT is stored within the meta data. However due to limitations while using the Etherscan API this could not be used for the demo. 
+
+These smart contracts are currently deployed on the Ethereum Sepolia test net. They can be trivially be integrated to any EVM compatable network. While the Internet Computer requires WASM modules there are mechanisms to compile Solidity to WASM. Some work may have to be done to ensure that these contracts are compatable. 
